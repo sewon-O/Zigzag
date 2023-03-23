@@ -1,0 +1,172 @@
+body,
+p,
+ul {
+	margin: initial;
+	padding: initial;
+}
+
+li {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: initial;
+	font-size: inherit;
+	font-weight: inherit;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+:root {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+}
+
+.l_wrapper {
+	/* box-shadow: inset 0 0 10px red; */
+	width: 1080px;
+	margin: 0 auto;
+}
+
+.section {
+	padding: 100px 0;
+}
+
+.section_purple {
+	background-color: #673399;
+	color: white;
+}
+
+.section_pink {
+	background-color: seashell;
+	color: salmon;
+}
+
+.section-header {
+	box-shadow: inset 0 0 10px cyan;
+	margin-bottom: 100px;
+}
+
+.section-contents {
+	box-shadow: inset 0 0 10px deeppink;
+}
+
+.title {
+	box-shadow: inset 0 0 10px yellow;
+	display: flex;
+	align-items: center;
+}
+.title-headings {
+	box-shadow: inset 0 0 10px darkorange;
+	/* width값 대신 flex-basis */
+	flex-basis: 26%;
+	/* flex아이템들에는 flex-shrink 초기값이 1이 지정되어 있다. 0을 넣어줘야 지정한 flex-basis 값이 보장된다. 0이 아니면 옆의 p태그 컨텐츠가 많아지면 flex-basis 값이 보장 안될 수 있음 */
+	flex-shrink: 0;
+	font-size: 40px;
+}
+.title-headings strong {
+	box-shadow: inset 0 -20px orangered;
+}
+.title p {
+	box-shadow: inset 0 0 10px lime;
+	max-width: 400px;
+	/* 디스플레이 플렉스 주면 타이틀 p태그에 굳이 디스플레이 블록 안 줘도 됨 */
+	display: flex;
+	align-items: center;
+}
+.title p::before {
+	content: "";
+	width: 60px;
+	height: 2px;
+	flex-shrink: 0;
+	background-color: currentColor;
+	margin-right: 20px;
+}
+
+.card {
+	background-color: #fff;
+	color: #222;
+	margin-bottom: 24px;
+	display: flex;
+	min-height: 200px;
+}
+
+/* 카드 뒤에 나오는 카드들에게 마진 탑 주는거 */
+/* .card + .card{margin-top: 24px;} */
+/* .card:not(:first-child){margin-top: 24px;} */
+
+.card:last-child {
+	margin-bottom: 0;
+}
+
+.card:nth-child(even) {
+	flex-direction: row-reverse;
+}
+.card-cover {
+	box-shadow: inset 0 0 10px darkorange;
+	flex-basis: 26%;
+	flex-shrink: 0;
+	position: relative;
+}
+
+.card-cover img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	object-fit: cover;
+}
+
+.card-cover h2 {
+	/* 원래 나중에 작성된 마크업이 앞으로 튀어 나오지만 포지션이 스테틱이 아니면... */
+	position: relative;
+	background-color: rgb(0 0 0 /0.4);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 30px;
+}
+
+.card-contents {
+	box-shadow: inset 0 0 10px dodgerblue;
+	flex-basis: 0;
+	/* flex-grow 초기값은 0이여서 플렉스 아이쳄은 기본적으로 팽창하지 않는다. */
+	flex-grow: 1;
+	/* min-width: auto; < 초기값. 그래서 컨텐츠가 많아지면 플렉스 컨테이너 밖으로 삐져나감 */
+	min-width: 0;
+	padding: 30px;
+}
+
+.lists {
+	box-shadow: inset 0 0 10px lime;
+}
+
+.lists li {
+	text-indent: -20px;
+	padding-left: 20px;
+}
+.lists li + li {
+	margin-top: 6px;
+}
+
+.lists li::before {
+	content: "";
+	background-color: orange;
+	width: 10px;
+	height: 10px;
+	/* 가상요소는 인라인 요소여서 width,height 없음 */
+	display: inline-block;
+	border-radius: 50%;
+	margin-right: 10px;
+}

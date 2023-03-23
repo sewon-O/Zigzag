@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS 특강 프로젝트</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<header></header>
+
+			<!-- section_purple -->
+			<section class="section section_purple">
+				<div class="l_wrapper">
+					<header class="section-header">
+						<div class="title">
+							<h1 class="title-headings">
+								START YOUR <strong>PORTFOLIO PROJECT</strong>
+							</h1>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
+								necessitatibus, inventore nesciunt modi, laudantium quas
+								provident quidem explicabo nihil quam temporibus iste libero
+								placeat et, nobis nam rerum dolores obcaecati.
+							</p>
+						</div>
+					</header>
+					<!-- section-contents는 내부에 컨텐츠가 바뀔 경우를 위해 레이우아웃 용도 > 그래서 건들기 말기-->
+					<div class="section-contents">
+						<section class="card">
+							<div class="card-cover">
+								<!-- 커버 사진이 자주 바뀌는 경우 마크업으로 넣어주고 고정적이면 background로 넣어주기 -->
+								<img src="images/photo01.png" />
+								<h2>Rest</h2>
+							</div>
+							<div class="card-contents">
+								<!-- ul에 class 달아주기! 재사용할 수도 있으니. -->
+								<ul class="lists">
+									<li>
+										Lorem ipsum dolor sit amet.lorem Lorem ipsum dolor sit amet
+										consectetur adipisicing elit. Minima libero illo nobis
+										excepturi magni dignissimos vitae, expedita molestiae minus
+										laborum dolorem totam id deserunt, fugit esse modi. Fugiat,
+										reiciendis veritatis.
+									</li>
+									<li>Lorem ipsum dolor sit amet.</li>
+									<li>Lorem ipsum dolor sit amet.</li>
+								</ul>
+							</div>
+						</section>
+						<section class="card">
+							<div class="card-cover">...</div>
+							<div class="card-contents">...</div>
+						</section>
+						<section class="card">
+							<div class="card-cover">...</div>
+							<div class="card-contents">...</div>
+						</section>
+					</div>
+				</div>
+			</section>
+
+			<!-- section_pink -->
+			<section class="section section_pink">
+				<div class="l_wrapper">
+					<header class="section-header">...</header>
+					<div class="section-contents">...</div>
+				</div>
+			</section>
+
+			<footer></footer>
+		</main>
+	</body>
+</html>
